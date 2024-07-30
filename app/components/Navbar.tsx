@@ -22,16 +22,15 @@ const Navbar = async () => {
             </ul>
         </div>
         <div className="flexCenter gap-4">
-                {session ? (
+                {
                     <>
 
                     <Link href='/create-project'>
                         Share Work
                     </Link>
                     </>
-                ) : (
-                    <AuthProviders />
-                )}
+
+                }
         </div>
     </nav>
     )
