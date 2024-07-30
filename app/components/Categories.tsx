@@ -1,7 +1,8 @@
 'use client'
 import { categoryFilters } from "@/constants"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-const Categories = () => {
+import { Suspense } from "react"
+const Pre_Categories = () => {
     const router = useRouter()
     const pathname = usePathname()
     const search = useSearchParams()
@@ -24,6 +25,14 @@ const Categories = () => {
                 </button>))}
             </ul>
         </div>
+    )
+}
+
+const Categories = () => {
+    return(
+        <Suspense>
+            <Pre_Categories />
+        </Suspense>
     )
 }
 
